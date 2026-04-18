@@ -1,0 +1,6 @@
+{
+  "chart_no": "{{ InputChartNo.text }}",
+  "name": "{{ InputName.text }}",
+  "birth_date": "{{ DateBirth.selectedDate || null }}",
+  "phone": "{{ InputPhone.text || null }}"
+}

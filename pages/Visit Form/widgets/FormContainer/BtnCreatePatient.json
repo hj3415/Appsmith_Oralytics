@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 34,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": true,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "7wr3y19m5c",
+  "leftColumn": 45,
+  "minWidth": 120,
+  "mobileBottomRow": 55,
+  "mobileLeftColumn": 6,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 51,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  CreatePatient.run(\n    () => {\n      showAlert(\"환자 등록이 완료되었습니다.\", \"success\");\n      resetWidget(\"InputChartNo\", true);\n      resetWidget(\"InputName\", true);\n      resetWidget(\"DateBirth\", true);\n      resetWidget(\"InputPhone\", true);\n    },\n    () => {\n      showAlert(\"환자 등록에 실패했습니다.\", \"error\");\n    }\n  )\n}}",
+  "parentColumnSpace": 18,
+  "parentId": "nbew34rjk9",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 61,
+  "text": "등록",
+  "topRow": 30,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "zq9ygdsgc2",
+  "widgetName": "BtnCreatePatient"
+}
