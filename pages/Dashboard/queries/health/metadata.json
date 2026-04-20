@@ -1,6 +1,6 @@
 {
   "gitSyncId": "69e18627171f0d29daafe8a8_de314071-c8b0-4a08-83c7-bcc9785433c6",
-  "id": "Visit Form_health",
+  "id": "Dashboard_health",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -12,7 +12,16 @@
       "formData": {
         "apiContentType": "none"
       },
-      "headers": [],
+      "headers": [
+        {
+          "key": "",
+          "value": ""
+        },
+        {
+          "key": "",
+          "value": ""
+        }
+      ],
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
@@ -34,7 +43,7 @@
     },
     "dynamicBindingPathList": [],
     "name": "health",
-    "pageId": "Visit Form",
+    "pageId": "Dashboard",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

@@ -1,8 +1,6 @@
-{{
 {
   "chart_no": "{{Input_NewPatientChartNo.text}}",
   "name": "{{Input_NewPatientName.text}}",
   "birth_date": "{{DatePicker_NewPatientBirthDate.formattedDate}}",
   "phone": "{{Input_NewPatientPhone.text}}"
 }
-}}

@@ -1,6 +1,6 @@
 {
   "gitSyncId": "69e18627171f0d29daafe8a8_92f1081d-60f0-46e2-bda3-afad5bbdd1d6",
-  "id": "Visit Form_info",
+  "id": "Dashboard_info",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -34,7 +34,7 @@
     },
     "dynamicBindingPathList": [],
     "name": "info",
-    "pageId": "Visit Form",
+    "pageId": "Dashboard",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

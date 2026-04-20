@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{{\n{\n  \"chart_no\": \"{{Input_NewPatientChartNo.text}}\",\n  \"name\": \"{{Input_NewPatientName.text}}\",\n  \"birth_date\": \"{{DatePicker_NewPatientBirthDate.formattedDate}}\",\n  \"phone\": \"{{Input_NewPatientPhone.text}}\"\n}\n}}",
+      "body": "{\n  \"chart_no\": \"{{Input_NewPatientChartNo.text}}\",\n  \"name\": \"{{Input_NewPatientName.text}}\",\n  \"birth_date\": \"{{DatePicker_NewPatientBirthDate.formattedDate}}\",\n  \"phone\": \"{{Input_NewPatientPhone.text}}\"\n}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

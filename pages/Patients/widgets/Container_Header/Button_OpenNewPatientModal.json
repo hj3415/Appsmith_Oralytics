@@ -32,7 +32,7 @@
   "mobileRightColumn": 61,
   "mobileTopRow": 3,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(Modal_NewPatient.name);}}",
+  "onClick": "{{JSPatientsPage.openNewPatientModal();}}",
   "parentColumnSpace": 6.07421875,
   "parentId": "703ic6ng5u",
   "parentRowSpace": 10,
