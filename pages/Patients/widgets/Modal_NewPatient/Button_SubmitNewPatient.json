@@ -1,9 +1,10 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 38,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonStyle": "PRIMARY_BUTTON",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
@@ -14,31 +15,35 @@
       "key": "borderRadius"
     }
   ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "2kidkklhyf",
-  "leftColumn": 36,
+  "key": "lxnci4nqmd",
+  "leftColumn": 41,
   "minWidth": 120,
-  "mobileBottomRow": 5,
-  "mobileLeftColumn": 36,
-  "mobileRightColumn": 52,
-  "mobileTopRow": 1,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "parentColumnSpace": 9.53369140625,
-  "parentId": "lboerox60l",
-  "parentRowSpace": 10,
+  "onClick": "{{JSPatientsPage.submitNewPatient();}}",
+  "parentId": "51d3u5gaqq",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 47,
-  "text": "Submit",
-  "topRow": 1,
+  "rightColumn": 57,
+  "text": "확인",
+  "topRow": 34,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "y39ws2odiy",
-  "widgetName": "Button1"
+  "widgetId": "gh7rio7im3",
+  "widgetName": "Button_SubmitNewPatient"
 }

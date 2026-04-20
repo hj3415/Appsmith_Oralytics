@@ -14,6 +14,11 @@
       "key": "borderRadius"
     }
   ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
@@ -26,6 +31,7 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
+  "onClick": "{{JSPatientsPage.resetSearch();}}",
   "parentColumnSpace": 9.53369140625,
   "parentId": "lboerox60l",
   "parentRowSpace": 10,
@@ -35,10 +41,10 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 61,
-  "text": "Submit",
+  "text": "초기화",
   "topRow": 1,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "8rd126yz7d",
-  "widgetName": "Button2"
+  "widgetName": "Button_ResetPatientsSearch"
 }
