@@ -402,7 +402,7 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 37,
+  "rightColumn": 58,
   "searchKey": "",
   "tableData": "{{Api_GetPatients.data.data.items}}",
   "textSize": "0.875rem",
