@@ -1,0 +1,5 @@
+{
+  "visited_at": "{{dpEditVisitVisitedAt.formattedDate}}",
+  "examiner": "{{inputEditVisitExaminer.text}}",
+  "memo": "{{taEditVisitMemo.text}}"
+}

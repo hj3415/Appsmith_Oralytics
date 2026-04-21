@@ -1,0 +1,5 @@
+{
+  "name": "{{inputEditPatientName.text}}",
+  "birth_date": "{{dpEditPatientBirthDate.formattedDate}}",
+  "phone": "{{inputEditPatientPhone.text}}"
+}

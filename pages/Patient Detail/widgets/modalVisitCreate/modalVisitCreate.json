@@ -1,0 +1,84 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 494,
+  "boxShadow": "none",
+  "canEscapeKeyClose": true,
+  "canOutsideClickClose": true,
+  "children": [
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 450,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": true,
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "flexLayers": [],
+      "isDisabled": false,
+      "isLoading": false,
+      "isVisible": true,
+      "key": "f8iyoed0wx",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 240,
+      "minWidth": 450,
+      "mobileBottomRow": 240,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 414,
+      "mobileTopRow": 0,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "f7hqngiky9",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 414,
+      "shouldScrollContents": false,
+      "topRow": 0,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "2czoizhyol",
+      "widgetName": "Canvas8Copy1Copy"
+    }
+  ],
+  "detachFromLayout": true,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "height": 450,
+  "isCanvas": true,
+  "isLoading": false,
+  "key": "80s9mc8ysg",
+  "leftColumn": 38,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 24,
+  "mobileBottomRow": 60,
+  "mobileLeftColumn": 38,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 36,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 17.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 62,
+  "shouldScrollContents": true,
+  "topRow": 44,
+  "type": "MODAL_WIDGET",
+  "version": 2,
+  "widgetId": "f7hqngiky9",
+  "widgetName": "modalVisitCreate",
+  "width": 456
+}

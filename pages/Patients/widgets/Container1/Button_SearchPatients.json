@@ -31,7 +31,7 @@
   "mobileRightColumn": 52,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "onClick": "{{JSPatientsPage.searchPatients();}}",
+  "onClick": "{{PatientsActions.searchPatients();}}",
   "parentColumnSpace": 9.53369140625,
   "parentId": "lboerox60l",
   "parentRowSpace": 10,

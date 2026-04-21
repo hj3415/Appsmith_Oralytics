@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "69e3251919e60739a31377c2_50e28cfe-ff65-4f63-aa59-15f038b1560b",
+  "id": "Patients_PatientsActions",
+  "unpublishedCollection": {
+    "name": "PatientsActions",
+    "pageId": "Patients",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

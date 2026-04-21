@@ -1,0 +1,6 @@
+{
+  "patient_id": {{appsmith.URL.queryParams.patient_id}},
+  "visited_at": "{{dpCreateVisitVisitedAt.formattedDate}}",
+  "examiner": "{{inputCreateVisitExaminer.text}}",
+  "memo": "{{taCreateVisitMemo.text}}"
+}

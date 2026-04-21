@@ -120,7 +120,7 @@
   "mobileRightColumn": 37,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "onRowSelected": "{{JSPatientsPage.goToPatientDetail(Table_Patients.selectedRow.id);}}",
+  "onRowSelected": "{{PatientsActions.goToPatientDetail(Table_Patients.selectedRow.id);}}",
   "originalBottomRow": 34,
   "originalTopRow": 6,
   "parentColumnSpace": 7.298828125,
