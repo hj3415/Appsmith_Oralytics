@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 10,
+  "bottomRow": 11,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,6 +11,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -40,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 58,
   "shouldTruncate": false,
-  "text": "selected visit memo",
+  "text": "메모: {{ Api_ReadVisit.data.data.memo}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 6,

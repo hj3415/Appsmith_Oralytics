@@ -11,6 +11,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -21,7 +24,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "zhu194wz1j",
-  "leftColumn": 24,
+  "leftColumn": 34,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -30,7 +33,7 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 6,
+  "originalBottomRow": 9,
   "originalTopRow": 2,
   "overflow": "NONE",
   "parentColumnSpace": 9.66015625,
@@ -38,9 +41,9 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 31,
+  "rightColumn": 49,
   "shouldTruncate": false,
-  "text": "phone",
+  "text": "연락처: {{Api_ReadPatient.data.data.phone}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 2,

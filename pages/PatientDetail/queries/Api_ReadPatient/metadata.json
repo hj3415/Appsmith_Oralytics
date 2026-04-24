@@ -16,7 +16,7 @@
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/patients/{{appsmith.URL.queryParams.patient_id}}",
+      "path": "/patients/{{appsmith.store.selectedPatientId}}",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -39,7 +39,7 @@
     ],
     "name": "Api_ReadPatient",
     "pageId": "PatientDetail",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

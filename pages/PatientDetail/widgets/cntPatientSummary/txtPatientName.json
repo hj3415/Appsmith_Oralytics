@@ -11,6 +11,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -30,7 +33,7 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 6,
+  "originalBottomRow": 7,
   "originalTopRow": 2,
   "overflow": "NONE",
   "parentColumnSpace": 9.66015625,
@@ -38,9 +41,9 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 9,
+  "rightColumn": 12,
   "shouldTruncate": false,
-  "text": "name\n",
+  "text": "이름: {{Api_ReadPatient.data.data.name}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 2,

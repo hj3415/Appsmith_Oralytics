@@ -25,7 +25,7 @@
     "fullyQualifiedName": "PatientDetailActions.onPageLoad",
     "name": "onPageLoad",
     "pageId": "PatientDetail",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": true
   }
 }

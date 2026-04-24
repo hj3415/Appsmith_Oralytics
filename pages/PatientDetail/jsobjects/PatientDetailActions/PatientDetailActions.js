@@ -41,6 +41,7 @@ export default {
   },
 
   async openPatientEditModal() {
+		await storeValue("editPatient", Api_ReadPatient.data.data);
     showModal(modalPatientEdit.name);
   },
 
@@ -86,12 +87,13 @@ export default {
     await Api_ReadVisit.run();
     await Api_ReadVisitTestResult.run();
 
-    const testResult = Api_ReadVisitTestResult.data;
+    const res = Api_ReadVisitTestResult.data;
+		const testResult = res?.data;
 
-    if (testResult && testResult.id) {
-      await storeValue("selectedTestResultId", testResult.id);
-      await Api_ReadBacteriaDetails.run();
-    }
+		if (testResult && testResult.id) {
+			await storeValue("selectedTestResultId", testResult.id);
+			await Api_ReadBacteriaDetails.run();
+		}
 
     showAlert("내원 상세를 불러왔습니다.", "success");
   } catch (e) {

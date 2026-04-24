@@ -21,7 +21,7 @@
       "httpMethod": "DELETE",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/visits/{{tblVisits.selectedRow.id}}",
+      "path": "/visits/{{appsmith.store.selectedVisitId}}",
       "pluginSpecifiedTemplates": [
         {
           "value": true

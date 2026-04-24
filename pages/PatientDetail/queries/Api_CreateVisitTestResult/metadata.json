@@ -21,7 +21,7 @@
       "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/visits/{visit_id}/test-result",
+      "path": "/visits/{{appsmith.store.selectedVisitId}}/test-result",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -40,6 +40,9 @@
     "dynamicBindingPathList": [
       {
         "key": "body"
+      },
+      {
+        "key": "path"
       }
     ],
     "name": "Api_CreateVisitTestResult",
