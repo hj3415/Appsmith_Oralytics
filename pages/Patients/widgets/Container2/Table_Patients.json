@@ -404,7 +404,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 37,
   "searchKey": "",
-  "tableData": "{{Api_GetPatients.data.data.items}}",
+  "tableData": "{{Api_ReadPatientList.data.data.items}}",
   "textSize": "0.875rem",
   "topRow": 6,
   "totalRecordsCount": 0,

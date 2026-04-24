@@ -38,15 +38,15 @@
       "isDefault": false
     },
     {
-      "id": "Patient Detail",
+      "id": "PatientDetail",
       "isDefault": false
     },
     {
-      "id": "Test Result Entry",
+      "id": "TestResultEntry",
       "isDefault": false
     },
     {
-      "id": "Report View",
+      "id": "ReportView",
       "isDefault": false
     }
   ],
