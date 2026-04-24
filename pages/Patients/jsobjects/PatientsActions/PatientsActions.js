@@ -1,29 +1,29 @@
 export default {
   searchPatients: async () => {
-    await Api_GetPatients.run().catch(() => {});
+    await Api_ReadPatientList.run().catch(() => {});
 
-    const body = Api_GetPatients.data;
-    const ok = Api_GetPatients.responseMeta?.isExecutionSuccess;
+    const body = Api_ReadPatientList.data;
+    const ok = Api_ReadPatientList.responseMeta?.isExecutionSuccess;
 
     if (!ok) {
       showAlert(body?.message || "환자 조회에 실패했습니다.", "error");
       console.log("searchPatients body:", body);
-      console.log("searchPatients responseMeta:", Api_GetPatients.responseMeta);
+      console.log("searchPatients responseMeta:", Api_ReadPatientList.responseMeta);
     }
   },
 
   resetSearch: async () => {
     resetWidget("Input_PatientSearch", true);
 
-    await Api_GetPatients.run().catch(() => {});
+    await Api_ReadPatientList.run().catch(() => {});
 
-    const body = Api_GetPatients.data;
-    const ok = Api_GetPatients.responseMeta?.isExecutionSuccess;
+    const body = Api_ReadPatientList.data;
+    const ok = Api_ReadPatientList.responseMeta?.isExecutionSuccess;
 
     if (!ok) {
       showAlert(body?.message || "검색 초기화 후 환자 조회에 실패했습니다.", "error");
       console.log("resetSearch body:", body);
-      console.log("resetSearch responseMeta:", Api_GetPatients.responseMeta);
+      console.log("resetSearch responseMeta:", Api_ReadPatientList.responseMeta);
     }
   },
 
@@ -49,17 +49,17 @@ export default {
 			resetWidget("Input_NewPatientBirthDate", true);
 			resetWidget("Input_NewPatientPhone", true);
 
-      await Api_GetPatients.run().catch(() => {});
+      await Api_ReadPatientList.run().catch(() => {});
 
-      const listOk = Api_GetPatients.responseMeta?.isExecutionSuccess;
+      const listOk = Api_ReadPatientList.responseMeta?.isExecutionSuccess;
 
       if (!listOk) {
         showAlert(
-          Api_GetPatients.data?.message || "환자 목록 새로고침에 실패했습니다.",
+          Api_ReadPatientList.data?.message || "환자 목록 새로고침에 실패했습니다.",
           "warning"
         );
-        console.log("submitNewPatient refresh body:", Api_GetPatients.data);
-        console.log("submitNewPatient refresh responseMeta:", Api_GetPatients.responseMeta);
+        console.log("submitNewPatient refresh body:", Api_ReadPatientList.data);
+        console.log("submitNewPatient refresh responseMeta:", Api_ReadPatientList.responseMeta);
         return;
       }
 
