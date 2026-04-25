@@ -1,0 +1,50 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 46,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "0kp9c3qc3b",
+  "leftColumn": 8,
+  "minWidth": 120,
+  "mobileBottomRow": 60,
+  "mobileLeftColumn": 14,
+  "mobileRightColumn": 30,
+  "mobileTopRow": 56,
+  "needsErrorInfo": false,
+  "onClick": "{{PatientDetailActions.createOrUpdateTestResult();}}",
+  "parentColumnSpace": 12.625,
+  "parentId": "7cnz2eyqns",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 24,
+  "text": "검사결과 생성 및 수정",
+  "topRow": 42,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "g8ug6t1xoc",
+  "widgetName": "btnCreateOrUpdateTestResult"
+}

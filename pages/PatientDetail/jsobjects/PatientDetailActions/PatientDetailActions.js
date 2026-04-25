@@ -2,11 +2,13 @@ export default {
 	async onPageLoad() {
     try {
       const patientId = appsmith.URL.queryParams.patient_id;
+			/*
       if (!patientId) {
         showAlert("patient_id가 없습니다. 환자 목록으로 이동합니다.", "warning");
         navigateTo("Patients");
         return;
       }
+			*/
       await storeValue("selectedPatientId", Number(patientId));
       await storeValue("selectedVisitId", null);
       await storeValue("selectedTestResultId", null);
