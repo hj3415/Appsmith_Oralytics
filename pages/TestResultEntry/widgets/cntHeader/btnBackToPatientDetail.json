@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 15,
+  "bottomRow": 10,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -12,6 +12,16 @@
     },
     {
       "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
     }
   ],
   "isDefaultClickDisabled": true,
@@ -26,6 +36,7 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 11,
   "needsErrorInfo": false,
+  "onClick": "{{ navigateTo(\"PatientDetail\") }}",
   "originalBottomRow": 15,
   "originalTopRow": 11,
   "parentColumnSpace": 4.76171875,
@@ -37,8 +48,8 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 19,
-  "text": "Submit",
-  "topRow": 11,
+  "text": "환자 상세 페이지",
+  "topRow": 6,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "lhm6x6w0t6",
