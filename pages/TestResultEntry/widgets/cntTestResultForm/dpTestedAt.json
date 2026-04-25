@@ -7,16 +7,24 @@
   "closeOnSelection": true,
   "dateFormat": "YYYY-MM-DD HH:mm",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "2026-04-21T04:08:33.783Z",
+  "defaultDate": "{{ Api_ReadVisitTestResult.data.data?.tested_at || new Date() }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultDate"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultDate"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "firstDayOfWeek": 0,
   "isDisabled": false,

@@ -5,13 +5,16 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 9,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultText": "{{ Api_ReadVisitTestResult.data.data?.overall_score ?? \"\" }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",

@@ -17,6 +17,7 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1rem",
   "fontStyle": "BOLD",
@@ -42,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 55,
   "shouldTruncate": false,
-  "text": "Hello {{appsmith.user.name || appsmith.user.email}}",
+  "text": "이름: {{ Api_ReadPatient.data.data.name }}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 1,
