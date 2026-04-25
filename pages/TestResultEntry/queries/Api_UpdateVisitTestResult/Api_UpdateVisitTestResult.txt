@@ -1,0 +1,9 @@
+{
+  "visit_id": {{appsmith.store.selectedVisitId}},
+  "specimen_type": "{{selSpecimenType.selectedOptionValue}}",
+  "tested_at": "{{dpTestedAt.formattedDate}}",
+  "overall_score": {{inputOverallScore.text || 0}},
+  "overall_grade": "{{selOverallGrade.selectedOptionValue}}",
+  "summary_text": "{{taSummaryText.text}}",
+  "clinician_note": "{{taClinicianNote.text}}"
+}

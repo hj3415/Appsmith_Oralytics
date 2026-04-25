@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"visit_id\": {{tblVisits.selectedRow.id}},\n  \"specimen_type\": \"{{selSpecimenType.selectedOptionValue}}\",\n  \"tested_at\": \"{{dpTestedAt.formattedDate}}\",\n  \"overall_score\": {{inputOverallScore.text || 0}},\n  \"overall_grade\": \"{{selOverallGrade.selectedOptionValue}}\",\n  \"summary_text\": \"{{taSummaryText.text}}\",\n  \"clinician_note\": \"{{taClinicianNote.text}}\"\n}",
+      "body": "{\n  \"visit_id\": {{appsmith.store.selectedVisitId}},\n  \"specimen_type\": \"{{selSpecimenType.selectedOptionValue}}\",\n  \"tested_at\": \"{{dpTestedAt.formattedDate}}\",\n  \"overall_score\": {{inputOverallScore.text || 0}},\n  \"overall_grade\": \"{{selOverallGrade.selectedOptionValue}}\",\n  \"summary_text\": \"{{taSummaryText.text}}\",\n  \"clinician_note\": \"{{taClinicianNote.text}}\"\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

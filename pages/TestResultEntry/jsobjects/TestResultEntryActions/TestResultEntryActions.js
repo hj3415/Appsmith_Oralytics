@@ -36,9 +36,9 @@ export default {
     const existing = Api_ReadVisitTestResult.data.data;
 
     if (existing?.id) {
-      await Api_UpdateTestResult.run();
+      await Api_UpdateVisitTestResult.run();
     } else {
-      await Api_CreateTestResult.run();
+      await Api_CreateVisitTestResult.run();
     }
 
     await Api_ReadVisitTestResult.run();
@@ -80,12 +80,12 @@ export default {
   },
 
   bacteriaPayloadItems() {
-    const rows = Table_BacteriaDetails.updatedRows && Table_BacteriaDetails.updatedRows.length > 0
-      ? Table_BacteriaDetails.tableData.map(row => {
-          const updated = Table_BacteriaDetails.updatedRows.find(u => u.index === row.__originalIndex__);
+    const rows = tblBacteriaDetails.updatedRows && tblBacteriaDetails.updatedRows.length > 0
+      ? tblBacteriaDetails.tableData.map(row => {
+          const updated = tblBacteriaDetails.updatedRows.find(u => u.index === row.__originalIndex__);
           return updated ? { ...row, ...updated.allFields } : row;
         })
-      : Table_BacteriaDetails.tableData;
+      : tblBacteriaDetails.tableData;
 
     return rows.map((r) => ({
       bacteria_code: r.bacteria_code,
@@ -124,7 +124,7 @@ export default {
   },
 
   recommendationPayloadItems() {
-    return Table_Recommendations.tableData
+    return tblRecommendations.tableData
       .filter((r) => r.recommendation_code)
       .map((r) => ({
         recommendation_code: r.recommendation_code,
