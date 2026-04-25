@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 104,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -14,11 +14,6 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "onClick"
-    }
-  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -28,30 +23,30 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "0kp9c3qc3b",
-  "leftColumn": 44,
+  "key": "sg86q5t8t2",
+  "leftColumn": 37,
   "minWidth": 120,
-  "mobileBottomRow": 12,
-  "mobileLeftColumn": 45,
-  "mobileRightColumn": 61,
-  "mobileTopRow": 8,
+  "mobileBottomRow": 104,
+  "mobileLeftColumn": 37,
+  "mobileRightColumn": 53,
+  "mobileTopRow": 100,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(modalConfirmDeleteVisit.name)}}",
-  "originalBottomRow": 18,
-  "originalTopRow": 14,
-  "parentColumnSpace": 12.625,
-  "parentId": "v87dfma7us",
+  "onClick": "{{PatientDetailActions.goTestResultEntry();}}",
+  "originalBottomRow": 104,
+  "originalTopRow": 100,
+  "parentColumnSpace": 13.53125,
+  "parentId": "0",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 60,
-  "text": "방문 삭제",
-  "topRow": 13,
+  "rightColumn": 53,
+  "text": "검사 결과 페이지",
+  "topRow": 100,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "0r0auud2k5",
-  "widgetName": "btnDeleteVisit"
+  "widgetId": "88gftjgw6j",
+  "widgetName": "btnGoTestResult"
 }

@@ -224,4 +224,10 @@ export default {
 			console.log("confirmDeleteTestResult error", e);
 		}
 	},
+	async goTestResultEntry() {
+    navigateTo("TestResultEntry", {
+			patient_id: appsmith.store.selectedPatientId,
+			visit_id: appsmith.store.selectedVisitId
+		});
+  },
 }
