@@ -1,10 +1,11 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 46,
+  "bottomRow": 20,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-  "buttonVariant": "PRIMARY",
+  "buttonStyle": "PRIMARY",
+  "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
@@ -12,11 +13,6 @@
     },
     {
       "key": "borderRadius"
-    }
-  ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -29,27 +25,27 @@
   "isLoading": false,
   "isVisible": true,
   "key": "0kp9c3qc3b",
-  "leftColumn": 8,
+  "leftColumn": 26,
   "minWidth": 120,
-  "mobileBottomRow": 60,
-  "mobileLeftColumn": 14,
-  "mobileRightColumn": 30,
-  "mobileTopRow": 56,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 31,
+  "mobileRightColumn": 47,
+  "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{ TestResultEntryActions.saveTestResultHeader() }}",
-  "parentColumnSpace": 12.625,
-  "parentId": "7cnz2eyqns",
-  "parentRowSpace": 10,
+  "onClick": "{{closeModal(modalConfirmDeleteTestResult.name);}}",
+  "originalBottomRow": 24,
+  "originalTopRow": 20,
+  "parentId": "tyu4128v0s",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 24,
-  "text": "검사결과 기본정보 저장",
-  "topRow": 42,
+  "rightColumn": 42,
+  "text": "취소",
+  "topRow": 16,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "g8ug6t1xoc",
-  "widgetName": "btnCreateOrUpdateTestResult"
+  "widgetId": "qno238m5p0",
+  "widgetName": "btnCancelDeleteCopy"
 }

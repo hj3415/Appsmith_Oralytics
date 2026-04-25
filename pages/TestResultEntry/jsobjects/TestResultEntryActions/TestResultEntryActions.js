@@ -169,5 +169,20 @@ export default {
     }
 
     navigateTo("ReportViewPage");
-  }
+  },
+	
+	async confirmDeleteTestResult() {
+		try {
+			await Api_DeleteVisitTestResult.run();
+
+			closeModal(modalConfirmDeleteTestResult.name);
+
+			await storeValue("selectedTestResultId", null);
+
+			showAlert("검사 결과가 삭제되었습니다.", "success");
+		} catch (e) {
+			showAlert("검사 결과 삭제에 실패했습니다.", "error");
+			console.log("confirmDeleteTestResult error", e);
+		}
+	},
 };
