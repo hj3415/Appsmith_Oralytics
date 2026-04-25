@@ -1,6 +1,6 @@
 {
   "gitSyncId": "69e5ff1222f495834779eb8e_c0387534-2916-4daa-889f-759b62d866f3",
-  "id": "TestResultEntry_ApiBacteriaDetails",
+  "id": "TestResultEntry_Api_SaveBacteriaDetails",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -21,7 +21,7 @@
       "httpMethod": "PUT",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/test-results/{test_result_id}/bacteria-details",
+      "path": "/test-results/{{appsmith.store.selectedTestResultId}}/bacteria-details",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -37,8 +37,12 @@
       "name": "oralytics_sqlite",
       "pluginId": "restapi-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "ApiBacteriaDetails",
+    "dynamicBindingPathList": [
+      {
+        "key": "path"
+      }
+    ],
+    "name": "Api_SaveBacteriaDetails",
     "pageId": "TestResultEntry",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
