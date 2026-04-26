@@ -32,6 +32,8 @@
   "mobileTopRow": 32,
   "needsErrorInfo": false,
   "onClick": "{{TestResultEntryActions.saveBacteriaDetails();}}",
+  "originalBottomRow": 36,
+  "originalTopRow": 32,
   "parentColumnSpace": 4.76171875,
   "parentId": "5m3eo6y0bz",
   "parentRowSpace": 10,

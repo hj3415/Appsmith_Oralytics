@@ -48,6 +48,10 @@
     {
       "id": "ReportView",
       "isDefault": false
+    },
+    {
+      "id": "Settings",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

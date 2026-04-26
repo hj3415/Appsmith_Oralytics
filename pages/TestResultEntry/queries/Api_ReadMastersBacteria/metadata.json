@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "69e5ff1222f495834779eb8e_e01e31c5-ccea-47db-89d6-8a2c32a4e8d9",
-  "id": "TestResultEntry_Api_ReadRecommendationMaster",
+  "gitSyncId": "69e5ff1222f495834779eb8e_859dced9-8f1a-4d5e-895a-2a26df60f8e2",
+  "id": "TestResultEntry_Api_ReadMastersBacteria",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -16,7 +16,7 @@
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/recommendation-master",
+      "path": "/masters/bacteria",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -33,9 +33,9 @@
       "pluginId": "restapi-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Api_ReadRecommendationMaster",
+    "name": "Api_ReadMastersBacteria",
     "pageId": "TestResultEntry",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

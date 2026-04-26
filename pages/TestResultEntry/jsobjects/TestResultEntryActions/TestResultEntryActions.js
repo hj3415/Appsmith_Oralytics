@@ -28,8 +28,8 @@ export default {
 			await Promise.all([
 				Api_ReadPatient.run(),
 				Api_ReadVisit.run(),
-				Api_ReadBacteriaMaster.run(),
-				Api_ReadRecommendationMaster.run()
+				Api_ReadMastersBacteria.run(),
+				Api_ReadMastersRecommendations.run()
 			]);
 
 			await Api_ReadVisitTestResult.run();
@@ -84,7 +84,7 @@ export default {
 
   bacteriaTableData() {
     const savedItems = Api_ReadBacteriaDetails.data?.data?.items || [];
-    const masters = Api_ReadBacteriaMaster.data?.data?.items || [];
+    const masters = Api_ReadMastersBacteria.data?.data?.items || [];
 
     if (savedItems.length > 0) {
       return savedItems;
