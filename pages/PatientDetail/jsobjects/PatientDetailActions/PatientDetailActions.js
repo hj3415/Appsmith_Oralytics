@@ -224,10 +224,44 @@ export default {
 			console.log("confirmDeleteTestResult error", e);
 		}
 	},
-	async goTestResultEntry() {
-    navigateTo("TestResultEntry", {
-			patient_id: appsmith.store.selectedPatientId,
-			visit_id: appsmith.store.selectedVisitId
-		});
+	
+  async openTestResultEntry() {
+    try {
+      const patientId = appsmith.store.selectedPatientId;
+      const visitId = appsmith.store.selectedVisitId;
+
+      if (!patientId) {
+        showAlert("먼저 환자를 선택해주세요.", "warning");
+        return;
+      }
+
+      if (!visitId) {
+        showAlert("먼저 방문 정보를 선택해주세요.", "warning");
+        return;
+      }
+
+      const res = await Api_OpenTestResultDraft.run();
+
+      if (!res.success || !res.data || !res.data.id) {
+        showAlert("검사결과 초안을 생성하지 못했습니다.", "error");
+        console.log("Api_OpenTestResultDraft response", res);
+        return;
+      }
+
+      const testResult = res.data;
+
+      await storeValue("selectedPatientId", patientId);
+      await storeValue("selectedVisitId", visitId);
+      await storeValue("selectedTestResultId", testResult.id);
+
+      navigateTo("TestResultEntry", {
+        patient_id: patientId,
+        visit_id: visitId,
+        test_result_id: testResult.id,
+      });
+    } catch (e) {
+      showAlert("검사결과 입력 화면으로 이동하지 못했습니다.", "error");
+      console.log("openTestResultEntry error", e);
+    }
   },
 }

@@ -1,36 +1,61 @@
 export default {
   async init() {
-    const patientId = appsmith.store.selectedPatientId;
-    const visitId = appsmith.store.selectedVisitId;
-		/*
-    if (!patientId || !visitId) {
-      showAlert("환자 또는 방문 정보가 없습니다.", "warning");
-      navigateTo("PatientDetailPage");
-      return;
-    }
-		*/
-    await Promise.all([
-      Api_ReadPatient.run(),
-      Api_ReadVisit.run(),
-      Api_ReadBacteriaMaster.run(),
-      Api_ReadRecommendationMaster.run()
-    ]);
+		try {
+			const patientId =
+				appsmith.URL.queryParams.patient_id ||
+				appsmith.store.selectedPatientId;
 
-    await Api_ReadVisitTestResult.run();
+			const visitId =
+				appsmith.URL.queryParams.visit_id ||
+				appsmith.store.selectedVisitId;
 
-    const testResult = Api_ReadVisitTestResult.data.data;
+			const testResultId =
+				appsmith.URL.queryParams.test_result_id ||
+				appsmith.store.selectedTestResultId;
 
-    if (testResult?.id) {
-      await storeValue("selectedTestResultId", testResult.id);
+			if (!patientId || !visitId || !testResultId) {
+				showAlert("환자, 방문 또는 검사결과 정보가 없습니다.", "warning");
+				navigateTo("PatientDetailPage", {
+					patient_id: patientId,
+				});
+				return;
+			}
 
-      await Promise.all([
-        Api_ReadBacteriaDetails.run(),
-        Api_ReadRecommendations.run()
-      ]);
-    } else {
-      await storeValue("selectedTestResultId", null);
-    }
-  },
+			await storeValue("selectedPatientId", Number(patientId));
+			await storeValue("selectedVisitId", Number(visitId));
+			await storeValue("selectedTestResultId", Number(testResultId));
+
+			await Promise.all([
+				Api_ReadPatient.run(),
+				Api_ReadVisit.run(),
+				Api_ReadBacteriaMaster.run(),
+				Api_ReadRecommendationMaster.run()
+			]);
+
+			await Api_ReadVisitTestResult.run();
+
+			const testResult = Api_ReadVisitTestResult.data.data;
+
+			if (!testResult?.id) {
+				showAlert("검사결과 정보를 찾을 수 없습니다.", "warning");
+				navigateTo("PatientDetailPage", {
+					patient_id: patientId,
+				});
+				return;
+			}
+
+			await storeValue("selectedTestResultId", testResult.id);
+
+			await Promise.all([
+				Api_ReadBacteriaDetails.run(),
+				Api_ReadRecommendations.run()
+			]);
+
+		} catch (e) {
+			showAlert("검사결과 입력 화면을 불러오지 못했습니다.", "error");
+			console.log("TestResultEntry init error", e);
+		}
+	},
 
   async saveTestResultHeader() {
     const existing = Api_ReadVisitTestResult.data.data;
