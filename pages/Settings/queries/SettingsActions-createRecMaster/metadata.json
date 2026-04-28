@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "69e5ff1222f495834779eb8e_767fef0e-76d5-4f86-bde0-8f536fdbf881",
-  "id": "Settings_SettingsActions.openRecommendationEditModal",
+  "gitSyncId": "69e5ff1222f495834779eb8e_99f5c5a2-f1da-4368-a130-bdeda1072b10",
+  "id": "Settings_SettingsActions.createRecMaster",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "SettingsActions.openRecommendationEditModal",
-    "name": "openRecommendationEditModal",
+    "fullyQualifiedName": "SettingsActions.createRecMaster",
+    "name": "createRecMaster",
     "pageId": "Settings",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

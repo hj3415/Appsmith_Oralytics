@@ -1,6 +1,6 @@
 {
   "gitSyncId": "69e5ff1222f495834779eb8e_2eeae8ec-a5a9-497f-bade-327f1be5ad91",
-  "id": "Settings_Api_DeleteRecMasters",
+  "id": "Settings_Api_DeleteRecMaster",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -42,7 +42,7 @@
         "key": "path"
       }
     ],
-    "name": "Api_DeleteRecMasters",
+    "name": "Api_DeleteRecMaster",
     "pageId": "Settings",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "69e5ff1222f495834779eb8e_a78599a9-8b97-4007-9ee7-360e5c44f5d7",
-  "id": "Settings_Api_CreateBateriaMasters",
+  "gitSyncId": "69e5ff1222f495834779eb8e_86aca225-7f94-4cff-bbe4-f64061aa68f7",
+  "id": "Settings_Api_UpdateBacteriaMaster",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,17 +11,17 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"code\": \"{{ inpBacteriaCreateCode.text }}\",\n  \"name\": \"{{ inpBacteriaCreateName.text }}\",\n  \"category\": \"{{ inpBacteriaCreateCategory.text || null }}\"\n}",
+      "body": "{\n  \"name\": \"{{ inpBacteriaEditName.text }}\",\n  \"category\": \"{{ inpBacteriaEditCategory.text || null }}\"\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
         "apiContentType": "application/json"
       },
       "headers": [],
-      "httpMethod": "POST",
+      "httpMethod": "PUT",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/masters/bacteria",
+      "path": "/masters/bacteria/{{ tblBacteriaMasters.selectedRow.code }}",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -39,10 +39,13 @@
     },
     "dynamicBindingPathList": [
       {
+        "key": "path"
+      },
+      {
         "key": "body"
       }
     ],
-    "name": "Api_CreateBateriaMasters",
+    "name": "Api_UpdateBacteriaMaster",
     "pageId": "Settings",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

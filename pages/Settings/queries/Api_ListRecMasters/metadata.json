@@ -35,7 +35,7 @@
     "dynamicBindingPathList": [],
     "name": "Api_ListRecMasters",
     "pageId": "Settings",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

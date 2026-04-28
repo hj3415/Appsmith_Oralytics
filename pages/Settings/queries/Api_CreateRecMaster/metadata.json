@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "69e5ff1222f495834779eb8e_759c406e-503c-48f6-8822-6f87bfafb12d",
-  "id": "Settings_Api_UpdateRecMasters",
+  "gitSyncId": "69e5ff1222f495834779eb8e_cf9bb164-595c-402c-860f-a5eb8c4188ce",
+  "id": "Settings_Api_CreateRecMaster",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,17 +11,17 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"name\": \"{{ inpRecommendationEditName.text }}\",\n  \"category\": \"{{ inpRecommendationEditCategory.text || null }}\",\n  \"guide_text\": \"{{ txtRecommendationEditGuide.text || null }}\",\n  \"active\": {{ swRecommendationEditActive.isSwitchedOn }}\n}",
+      "body": "{\n  \"code\": \"{{ inpRecommendationCreateCode.text }}\",\n  \"name\": \"{{ inpRecommendationCreateName.text }}\",\n  \"category\": \"{{ inpRecommendationCreateCategory.text || null }}\",\n  \"guide_text\": \"{{ txtRecommendationCreateGuide.text || null }}\",\n  \"active\": {{ swRecommendationCreateActive.isSwitchedOn }}\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
         "apiContentType": "application/json"
       },
       "headers": [],
-      "httpMethod": "PUT",
+      "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/masters/recommendations/{{code}}",
+      "path": "/masters/recommendations",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -39,13 +39,10 @@
     },
     "dynamicBindingPathList": [
       {
-        "key": "path"
-      },
-      {
         "key": "body"
       }
     ],
-    "name": "Api_UpdateRecMasters",
+    "name": "Api_CreateRecMaster",
     "pageId": "Settings",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

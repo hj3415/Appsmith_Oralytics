@@ -2,7 +2,7 @@ export default {
   async init() {
     await Promise.all([
       Api_ListBacteriaMasters.run(),
-      Api_ListRecommendationMasters.run()
+      Api_ListRecMasters.run()
     ]);
   },
 
@@ -10,8 +10,8 @@ export default {
     await Api_ListBacteriaMasters.run();
   },
 
-  async refreshRecommendationMasters() {
-    await Api_ListRecommendationMasters.run();
+  async refreshRecMasters() {
+    await Api_ListRecMasters.run();
   },
 
   openBacteriaCreateModal() {
@@ -20,7 +20,7 @@ export default {
 
   async createBacteriaMaster() {
     try {
-      if (!inpBacteriaCreateCode.text || !inpBacteriaCreateName.text) {
+      if (!inputBacteriaCreateCode.text || !inputBacteriaCreateName.text) {
         showAlert("세균 코드와 이름은 필수입니다.", "warning");
         return;
       }
@@ -84,20 +84,20 @@ export default {
     }
   },
 
-  openRecommendationCreateModal() {
+  openRecCreateModal() {
     showModal(mdlRecCreate.name);
   },
 
-  async createRecommendationMaster() {
+  async createRecMaster() {
     try {
-      if (!inpRecommendationCreateCode.text || !inpRecommendationCreateName.text) {
+      if (!inputRecCreateCode.text || !inputRecCreateName.text) {
         showAlert("추천 코드와 이름은 필수입니다.", "warning");
         return;
       }
 
-      await Api_CreateRecommendationMaster.run();
+      await Api_CreateRecMaster.run();
       closeModal(mdlRecCreate.name);
-      await Api_ListRecommendationMasters.run();
+      await Api_ListRecMasters.run();
 
       showAlert("추천 마스터가 추가되었습니다.", "success");
     } catch (e) {
@@ -106,27 +106,27 @@ export default {
     }
   },
 
-  openRecommendationEditModal() {
-    const row = tblRecommendationMasters.selectedRow;
+  openRecEditModal() {
+    const row = tblRecMasters.selectedRow;
 
     if (!row || !row.code) {
       showAlert("수정할 추천 항목을 선택해 주세요.", "warning");
       return;
     }
 
-    showModal(mdlRecommendationEdit.name);
+    showModal(mdlRecEdit.name);
   },
 
-  async updateRecommendationMaster() {
+  async updateRecMaster() {
     try {
-      if (!tblRecommendationMasters.selectedRow?.code) {
+      if (!tblRecMasters.selectedRow?.code) {
         showAlert("수정할 추천 항목이 선택되지 않았습니다.", "warning");
         return;
       }
 
-      await Api_UpdateRecommendationMaster.run();
-      closeModal(mdlRecommendationEdit.name);
-      await Api_ListRecommendationMasters.run();
+      await Api_UpdateRecMaster.run();
+      closeModal(mdlRecEdit.name);
+      await Api_ListRecMasters.run();
 
       showAlert("추천 마스터가 수정되었습니다.", "success");
     } catch (e) {
@@ -135,17 +135,17 @@ export default {
     }
   },
 
-  async deactivateRecommendationMaster() {
+  async deactivateRecMaster() {
     try {
-      const row = tblRecommendationMasters.selectedRow;
+      const row = tblRecMasters.selectedRow;
 
       if (!row || !row.code) {
         showAlert("비활성화할 추천 항목을 선택해 주세요.", "warning");
         return;
       }
 
-      await Api_DeactivateRecommendationMaster.run();
-      await Api_ListRecommendationMasters.run();
+      await Api_DeactivateRecMaster.run();
+      await Api_ListRecMasters.run();
 
       showAlert("추천 마스터가 비활성화되었습니다.", "success");
     } catch (e) {

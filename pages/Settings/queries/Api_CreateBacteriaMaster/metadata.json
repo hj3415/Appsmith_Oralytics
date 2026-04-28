@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "69e5ff1222f495834779eb8e_08b22955-efc4-4f6b-bd49-98c33d8c4c12",
-  "id": "Settings_Api_DeleteBacteriaMasters",
+  "gitSyncId": "69e5ff1222f495834779eb8e_a78599a9-8b97-4007-9ee7-360e5c44f5d7",
+  "id": "Settings_Api_CreateBacteriaMaster",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,17 +11,17 @@
           "value": "application/json"
         }
       ],
-      "body": "",
+      "body": "{\n  \"code\": \"{{ inpBacteriaCreateCode.text }}\",\n  \"name\": \"{{ inpBacteriaCreateName.text }}\",\n  \"category\": \"{{ inpBacteriaCreateCategory.text || null }}\"\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
         "apiContentType": "application/json"
       },
       "headers": [],
-      "httpMethod": "DELETE",
+      "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/masters/bacteria/{{ tblBacteriaMasters.selectedRow.code }}",
+      "path": "/masters/bacteria",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -39,10 +39,10 @@
     },
     "dynamicBindingPathList": [
       {
-        "key": "path"
+        "key": "body"
       }
     ],
-    "name": "Api_DeleteBacteriaMasters",
+    "name": "Api_CreateBacteriaMaster",
     "pageId": "Settings",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

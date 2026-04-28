@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "69e5ff1222f495834779eb8e_b6f3deb0-6782-444f-8d1b-8c99a6a871ad",
-  "id": "Settings_SettingsActions.deactivateRecommendationMaster",
+  "gitSyncId": "69e5ff1222f495834779eb8e_fad780a3-b871-410a-8274-0712950b2a5d",
+  "id": "Settings_SettingsActions.refreshRecMasters",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "SettingsActions.deactivateRecommendationMaster",
-    "name": "deactivateRecommendationMaster",
+    "fullyQualifiedName": "SettingsActions.refreshRecMasters",
+    "name": "refreshRecMasters",
     "pageId": "Settings",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

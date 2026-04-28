@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "69e5ff1222f495834779eb8e_3bba2315-654a-4723-a3eb-2cf0381208fe",
-  "id": "Settings_SettingsActions.updateRecommendationMaster",
+  "gitSyncId": "69e5ff1222f495834779eb8e_767fef0e-76d5-4f86-bde0-8f536fdbf881",
+  "id": "Settings_SettingsActions.openRecEditModal",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "SettingsActions.updateRecommendationMaster",
-    "name": "updateRecommendationMaster",
+    "fullyQualifiedName": "SettingsActions.openRecEditModal",
+    "name": "openRecEditModal",
     "pageId": "Settings",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
