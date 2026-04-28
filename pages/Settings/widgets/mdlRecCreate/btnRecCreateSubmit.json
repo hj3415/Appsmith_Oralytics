@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 22,
+  "bottomRow": 52,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonStyle": "PRIMARY_BUTTON",
@@ -15,12 +15,13 @@
       "key": "borderRadius"
     }
   ],
+  "dynamicTriggerPathList": [],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
   "key": "f9r7yp1ywe",
-  "leftColumn": 47,
+  "leftColumn": 27,
   "minWidth": 120,
   "mobileBottomRow": 22,
   "mobileLeftColumn": 47,
@@ -33,11 +34,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 63,
-  "text": "Confirm",
-  "topRow": 18,
+  "rightColumn": 43,
+  "text": "저장",
+  "topRow": 48,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "vokoofrp69",
-  "widgetName": "Button8Copy1"
+  "widgetName": "btnRecCreateSubmit"
 }

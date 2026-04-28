@@ -85,7 +85,7 @@ export default {
   },
 
   openRecommendationCreateModal() {
-    showModal(mdlRecommendationCreate.name);
+    showModal(mdlRecCreate.name);
   },
 
   async createRecommendationMaster() {
@@ -96,7 +96,7 @@ export default {
       }
 
       await Api_CreateRecommendationMaster.run();
-      closeModal(mdlRecommendationCreate.name);
+      closeModal(mdlRecCreate.name);
       await Api_ListRecommendationMasters.run();
 
       showAlert("추천 마스터가 추가되었습니다.", "success");

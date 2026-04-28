@@ -1,14 +1,14 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 263,
+  "bottomRow": 593,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 240,
+      "bottomRow": 540,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -37,7 +37,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "9u72yv0rua",
+      "parentId": "1o58pnfxr0",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,8 +46,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "yb0739y8d7",
-      "widgetName": "Canvas4Copy1"
+      "widgetId": "428vr4m16u",
+      "widgetName": "Canvas4Copy1Copy"
     }
   ],
   "detachFromLayout": true,
@@ -57,7 +57,7 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "height": 240,
+  "height": 540,
   "isCanvas": true,
   "isLoading": false,
   "key": "9q13hvzbid",
@@ -75,10 +75,10 @@
   "renderMode": "CANVAS",
   "rightColumn": 61,
   "shouldScrollContents": true,
-  "topRow": 23,
+  "topRow": 53,
   "type": "MODAL_WIDGET",
   "version": 2,
-  "widgetId": "9u72yv0rua",
-  "widgetName": "mdlRecommendationCreate",
+  "widgetId": "1o58pnfxr0",
+  "widgetName": "mdlRecEdit",
   "width": 456
 }
