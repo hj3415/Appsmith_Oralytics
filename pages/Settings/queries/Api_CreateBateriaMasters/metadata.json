@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "",
+      "body": "{\n  \"code\": \"{{ inpBacteriaCreateCode.text }}\",\n  \"name\": \"{{ inpBacteriaCreateName.text }}\",\n  \"category\": \"{{ inpBacteriaCreateCategory.text || null }}\"\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
@@ -37,7 +37,11 @@
       "name": "oralytics_sqlite",
       "pluginId": "restapi-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "name": "Api_CreateBateriaMasters",
     "pageId": "Settings",
     "runBehaviour": "MANUAL",

@@ -21,7 +21,7 @@
       "httpMethod": "DELETE",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/masters/bacteria/{{code}}",
+      "path": "/masters/bacteria/{{ tblBacteriaMasters.selectedRow.code }}",
       "pluginSpecifiedTemplates": [
         {
           "value": true

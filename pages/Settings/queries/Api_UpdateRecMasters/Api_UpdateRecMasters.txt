@@ -1,0 +1,6 @@
+{
+  "name": "{{ inpRecommendationEditName.text }}",
+  "category": "{{ inpRecommendationEditCategory.text || null }}",
+  "guide_text": "{{ txtRecommendationEditGuide.text || null }}",
+  "active": {{ swRecommendationEditActive.isSwitchedOn }}
+}

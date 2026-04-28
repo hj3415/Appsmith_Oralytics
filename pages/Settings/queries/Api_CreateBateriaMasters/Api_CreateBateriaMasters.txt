@@ -1,0 +1,5 @@
+{
+  "code": "{{ inpBacteriaCreateCode.text }}",
+  "name": "{{ inpBacteriaCreateName.text }}",
+  "category": "{{ inpBacteriaCreateCategory.text || null }}"
+}

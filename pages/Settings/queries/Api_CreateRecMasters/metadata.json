@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "",
+      "body": "{\n  \"code\": \"{{ inpRecommendationCreateCode.text }}\",\n  \"name\": \"{{ inpRecommendationCreateName.text }}\",\n  \"category\": \"{{ inpRecommendationCreateCategory.text || null }}\",\n  \"guide_text\": \"{{ txtRecommendationCreateGuide.text || null }}\",\n  \"active\": {{ swRecommendationCreateActive.isSwitchedOn }}\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
@@ -37,7 +37,11 @@
       "name": "oralytics_sqlite",
       "pluginId": "restapi-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "name": "Api_CreateRecMasters",
     "pageId": "Settings",
     "runBehaviour": "MANUAL",

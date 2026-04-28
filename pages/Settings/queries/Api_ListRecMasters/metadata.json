@@ -12,34 +12,17 @@
       "formData": {
         "apiContentType": "none"
       },
-      "headers": [
-        {
-          "key": "",
-          "value": ""
-        },
-        {
-          "key": "",
-          "value": ""
-        }
-      ],
+      "headers": [],
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
+      "path": "/masters/recommendations",
       "pluginSpecifiedTemplates": [
         {
           "value": true
         }
       ],
-      "queryParameters": [
-        {
-          "key": "",
-          "value": ""
-        },
-        {
-          "key": "",
-          "value": ""
-        }
-      ],
+      "queryParameters": [],
       "timeoutInMillisecond": 10000
     },
     "confirmBeforeExecute": false,
@@ -49,6 +32,7 @@
       "name": "oralytics_sqlite",
       "pluginId": "restapi-plugin"
     },
+    "dynamicBindingPathList": [],
     "name": "Api_ListRecMasters",
     "pageId": "Settings",
     "runBehaviour": "MANUAL",

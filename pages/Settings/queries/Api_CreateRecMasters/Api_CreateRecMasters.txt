@@ -1,0 +1,7 @@
+{
+  "code": "{{ inpRecommendationCreateCode.text }}",
+  "name": "{{ inpRecommendationCreateName.text }}",
+  "category": "{{ inpRecommendationCreateCategory.text || null }}",
+  "guide_text": "{{ txtRecommendationCreateGuide.text || null }}",
+  "active": {{ swRecommendationCreateActive.isSwitchedOn }}
+}

@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "",
+      "body": "{\n  \"name\": \"{{ inpRecommendationEditName.text }}\",\n  \"category\": \"{{ inpRecommendationEditCategory.text || null }}\",\n  \"guide_text\": \"{{ txtRecommendationEditGuide.text || null }}\",\n  \"active\": {{ swRecommendationEditActive.isSwitchedOn }}\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
@@ -40,6 +40,9 @@
     "dynamicBindingPathList": [
       {
         "key": "path"
+      },
+      {
+        "key": "body"
       }
     ],
     "name": "Api_UpdateRecMasters",

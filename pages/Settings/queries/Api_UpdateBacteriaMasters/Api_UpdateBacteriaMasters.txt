@@ -1,0 +1,4 @@
+{
+  "name": "{{ inpBacteriaEditName.text }}",
+  "category": "{{ inpBacteriaEditCategory.text || null }}"
+}
