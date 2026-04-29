@@ -39,7 +39,7 @@
     ],
     "name": "Api_ReadBacteriaDetails",
     "pageId": "TestResultEntry",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }
