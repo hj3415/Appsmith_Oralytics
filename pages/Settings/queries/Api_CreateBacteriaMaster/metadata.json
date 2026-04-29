@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"code\": \"{{ inpBacteriaCreateCode.text }}\",\n  \"name\": \"{{ inpBacteriaCreateName.text }}\",\n  \"category\": \"{{ inpBacteriaCreateCategory.text || null }}\"\n}",
+      "body": "{\n  \"code\": \"{{ inputBacteriaCreateCode.text }}\",\n  \"name\": \"{{ inputBacteriaCreateName.text }}\",\n  \"category\": \"{{ inputBacteriaCreateCategory.text || null }}\"\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

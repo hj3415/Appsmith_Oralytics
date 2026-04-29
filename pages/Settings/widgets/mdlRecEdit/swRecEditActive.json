@@ -4,13 +4,21 @@
   "animateLoading": true,
   "bottomRow": 45,
   "boxShadow": "none",
-  "defaultSwitchState": true,
+  "defaultSwitchState": "{{ appsmith.store.selectedRecMaster?.active ?? true }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "isDisabled": false,
   "isLoading": false,

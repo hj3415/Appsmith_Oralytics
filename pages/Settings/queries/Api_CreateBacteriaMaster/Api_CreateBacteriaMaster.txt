@@ -1,5 +1,5 @@
 {
-  "code": "{{ inpBacteriaCreateCode.text }}",
-  "name": "{{ inpBacteriaCreateName.text }}",
-  "category": "{{ inpBacteriaCreateCategory.text || null }}"
+  "code": "{{ inputBacteriaCreateCode.text }}",
+  "name": "{{ inputBacteriaCreateName.text }}",
+  "category": "{{ inputBacteriaCreateCategory.text || null }}"
 }

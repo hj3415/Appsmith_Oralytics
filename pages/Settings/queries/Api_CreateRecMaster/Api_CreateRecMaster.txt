@@ -1,7 +1,7 @@
 {
-  "code": "{{ inpRecommendationCreateCode.text }}",
-  "name": "{{ inpRecommendationCreateName.text }}",
-  "category": "{{ inpRecommendationCreateCategory.text || null }}",
-  "guide_text": "{{ txtRecommendationCreateGuide.text || null }}",
-  "active": {{ swRecommendationCreateActive.isSwitchedOn }}
+  "code": "{{ inputRecCreateCode.text }}",
+  "name": "{{ inputRecCreateName.text }}",
+  "category": "{{ inputRecCreateCategory.text || null }}",
+  "guide_text": "{{ txtRecCreateGuide.text || null }}",
+  "active": {{ swRecCreateActive.isSwitchedOn }}
 }

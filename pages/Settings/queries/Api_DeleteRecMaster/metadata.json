@@ -21,7 +21,7 @@
       "httpMethod": "DELETE",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/masters/recommendations/{{code}}",
+      "path": "/masters/recommendations/{{ tblRecMasters.selectedRow.code }}",
       "pluginSpecifiedTemplates": [
         {
           "value": true

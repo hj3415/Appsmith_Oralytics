@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"name\": \"{{ inpRecommendationEditName.text }}\",\n  \"category\": \"{{ inpRecommendationEditCategory.text || null }}\",\n  \"guide_text\": \"{{ txtRecommendationEditGuide.text || null }}\",\n  \"active\": {{ swRecommendationEditActive.isSwitchedOn }}\n}",
+      "body": "{\n  \"name\": \"{{ inputRecEditName.text }}\",\n  \"category\": \"{{ inputRecEditCategory.text || null }}\",\n  \"guide_text\": \"{{ txtRecEditGuide.text || null }}\",\n  \"active\": {{ swRecEditActive.isSwitchedOn }}\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
@@ -21,7 +21,7 @@
       "httpMethod": "PUT",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/masters/recommendations/{{code}}",
+      "path": "/masters/recommendations/{{ appsmith.store.selectedRecCode }}",
       "pluginSpecifiedTemplates": [
         {
           "value": true

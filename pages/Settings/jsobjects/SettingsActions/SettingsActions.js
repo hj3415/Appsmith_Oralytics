@@ -15,6 +15,10 @@ export default {
   },
 
   openBacteriaCreateModal() {
+		resetWidget("inputBacteriaCreateCode", true);
+		resetWidget("inputBacteriaCreateName", true);
+		resetWidget("inputBacteriaCreateCategory", true);
+		
     showModal(mdlBacteriaCreate.name);
   },
 
@@ -37,32 +41,45 @@ export default {
   },
 
   openBacteriaEditModal() {
-    const row = tblBacteriaMasters.selectedRow;
+		const row = tblBacteriaMasters.selectedRow;
+		return this.selectBacteriaAndOpenEdit(row);
+	},
+	
+	async selectBacteriaAndOpenEdit(row) {
+		try {
+			if (!row || !row.code) {
+				showAlert("수정할 세균 항목을 선택해 주세요.", "warning");
+				return;
+			}
 
-    if (!row || !row.code) {
-      showAlert("수정할 세균 항목을 선택해 주세요.", "warning");
+			await storeValue("selectedBacteriaCode", row.code);
+			await storeValue("selectedBacteriaMaster", row);
+			
+			setTimeout(() => {
+				showModal(mdlBacteriaEdit.name);
+			}, 100);
+			
+		} catch (e) {
+			showAlert("세균 항목 선택에 실패했습니다.", "error");
+			console.log("selectBacteriaAndOpenEdit error", e);
+		}
+	},
+	
+  async updateBacteriaMaster() {
+    await Api_UpdateBacteriaMaster.run().catch(() => {});
+    const body = Api_UpdateBacteriaMaster.data;
+    const ok = Api_UpdateBacteriaMaster.responseMeta?.isExecutionSuccess;
+		
+    if (ok) {
+      closeModal(mdlBacteriaEdit.name);
+      await Api_ListBacteriaMasters.run().catch(() => {});
+      showAlert(body?.message || "세균 마스터가 수정되었습니다.", "success");
       return;
     }
 
-    showModal(mdlBacteriaEdit.name);
-  },
-
-  async updateBacteriaMaster() {
-    try {
-      if (!tblBacteriaMasters.selectedRow?.code) {
-        showAlert("수정할 세균 항목이 선택되지 않았습니다.", "warning");
-        return;
-      }
-
-      await Api_UpdateBacteriaMaster.run();
-      closeModal(mdlBacteriaEdit.name);
-      await Api_ListBacteriaMasters.run();
-
-      showAlert("세균 마스터가 수정되었습니다.", "success");
-    } catch (e) {
-      console.log("updateBacteriaMaster error", e);
-      showAlert("세균 마스터 수정에 실패했습니다.", "error");
-    }
+    showAlert(body?.message || "세균 마스터 수정에 실패했습니다.", "error");
+    console.log("updateBacteriaMaster body:", body);
+    console.log("updateBacteriaMaster responseMeta:", Api_UpdateBacteriaMaster.responseMeta);
   },
 
   async deleteBacteriaMaster() {
@@ -108,31 +125,43 @@ export default {
 
   openRecEditModal() {
     const row = tblRecMasters.selectedRow;
-
+		return this.selectRecAndOpenEdit(row);
+  },
+	
+	async selectRecAndOpenEdit(row) {
+  try {
     if (!row || !row.code) {
       showAlert("수정할 추천 항목을 선택해 주세요.", "warning");
       return;
     }
 
-    showModal(mdlRecEdit.name);
-  },
+    await storeValue("selectedRecCode", row.code);
+    await storeValue("selectedRecMaster", row);
+
+    setTimeout(() => {
+      showModal(mdlRecEdit.name);
+    }, 100);
+  } catch (e) {
+    showAlert("추천 항목 선택에 실패했습니다.", "error");
+    console.log("selectRecAndOpenEdit error", e);
+  }
+},
 
   async updateRecMaster() {
-    try {
-      if (!tblRecMasters.selectedRow?.code) {
-        showAlert("수정할 추천 항목이 선택되지 않았습니다.", "warning");
-        return;
-      }
+    await Api_UpdateRecMaster.run().catch(() => {});
+    const body = Api_UpdateRecMaster.data;
+    const ok = Api_UpdateRecMaster.responseMeta?.isExecutionSuccess;
 
-      await Api_UpdateRecMaster.run();
+    if (ok) {
       closeModal(mdlRecEdit.name);
-      await Api_ListRecMasters.run();
-
-      showAlert("추천 마스터가 수정되었습니다.", "success");
-    } catch (e) {
-      console.log("updateRecommendationMaster error", e);
-      showAlert("추천 마스터 수정에 실패했습니다.", "error");
+      await Api_ListRecMasters.run().catch(() => {});
+      showAlert(body?.message || "추천 마스터가 수정되었습니다.", "success");
+      return;
     }
+
+    showAlert(body?.message || "추천 마스터 수정에 실패했습니다.", "error");
+    console.log("updateRecommendationMaster body:", body);
+    console.log("updateRecommendationMaster responseMeta:", Api_UpdateRecMaster.responseMeta);
   },
 
   async deactivateRecMaster() {
@@ -152,5 +181,5 @@ export default {
       console.log("deactivateRecommendationMaster error", e);
       showAlert("추천 마스터 비활성화에 실패했습니다.", "error");
     }
-  }
+  },
 };

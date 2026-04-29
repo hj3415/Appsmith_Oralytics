@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"code\": \"{{ inpRecommendationCreateCode.text }}\",\n  \"name\": \"{{ inpRecommendationCreateName.text }}\",\n  \"category\": \"{{ inpRecommendationCreateCategory.text || null }}\",\n  \"guide_text\": \"{{ txtRecommendationCreateGuide.text || null }}\",\n  \"active\": {{ swRecommendationCreateActive.isSwitchedOn }}\n}",
+      "body": "{\n  \"code\": \"{{ inputRecCreateCode.text }}\",\n  \"name\": \"{{ inputRecCreateName.text }}\",\n  \"category\": \"{{ inputRecCreateCategory.text || null }}\",\n  \"guide_text\": \"{{ txtRecCreateGuide.text || null }}\",\n  \"active\": {{ swRecCreateActive.isSwitchedOn }}\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

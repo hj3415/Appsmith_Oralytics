@@ -1,0 +1,3 @@
+{
+  "confirm_text": "{{ inputResetAllConfirm.text }}"
+}
