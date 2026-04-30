@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 5,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,20 +11,17 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
-  "fontStyle": "BOLD",
+  "fontSize": "0.875rem",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
   "key": "zhu194wz1j",
-  "leftColumn": 2,
+  "leftColumn": 33,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -33,23 +30,21 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 55,
-  "originalTopRow": 29,
   "overflow": "NONE",
   "parentColumnSpace": 9.66015625,
   "parentId": "ho9yqza8cj",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 17,
+  "rightColumn": 43,
   "shouldTruncate": false,
-  "text": "생년월일: {{Api_ReadPatient.data.data.birth_date}}",
+  "text": "이름:",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 7,
+  "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "3h97ogzkrt",
-  "widgetName": "txtPatientBirthDate"
+  "widgetId": "n2vqnmt7eg",
+  "widgetName": "txtPatientName"
 }

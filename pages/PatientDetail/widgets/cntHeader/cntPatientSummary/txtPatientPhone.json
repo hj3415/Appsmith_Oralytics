@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 6,
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,16 +11,13 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
-  "fontStyle": "BOLD",
+  "fontSize": "0.875rem",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
   "key": "zhu194wz1j",
@@ -33,23 +30,21 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 24,
-  "originalTopRow": 2,
   "overflow": "NONE",
   "parentColumnSpace": 9.66015625,
   "parentId": "ho9yqza8cj",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 12,
+  "rightColumn": 11,
   "shouldTruncate": false,
-  "text": "이름: {{Api_ReadPatient.data.data.name}}",
+  "text": "연락처:",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 2,
+  "topRow": 5,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "n2vqnmt7eg",
-  "widgetName": "txtPatientName"
+  "widgetId": "q69dtizxl1",
+  "widgetName": "txtPatientPhone"
 }
