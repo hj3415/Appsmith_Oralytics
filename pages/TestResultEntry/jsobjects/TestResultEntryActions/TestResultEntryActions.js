@@ -13,13 +13,15 @@ export default {
 				appsmith.URL.queryParams.test_result_id ||
 				appsmith.store.selectedTestResultId;
 
+			/*
 			if (!patientId || !visitId || !testResultId) {
 				showAlert("환자, 방문 또는 검사결과 정보가 없습니다.", "warning");
-				navigateTo("PatientDetailPage", {
+				navigateTo("PatientDetail", {
 					patient_id: patientId,
 				});
 				return;
 			}
+			*/
 
 			await storeValue("selectedPatientId", Number(patientId));
 			await storeValue("selectedVisitId", Number(visitId));
@@ -182,7 +184,7 @@ export default {
 
   async saveAllAndGoReport() {
     await this.saveAll();
-    navigateTo("ReportViewPage");
+    navigateTo("ReportView");
   },
 
   goReportView() {
@@ -193,7 +195,7 @@ export default {
       return;
     }
 
-    navigateTo("ReportViewPage");
+    navigateTo("ReportView");
   },
 	
 	async confirmDeleteTestResult() {

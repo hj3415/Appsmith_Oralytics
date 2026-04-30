@@ -36,7 +36,7 @@
   "mobileRightColumn": 53,
   "mobileTopRow": 56,
   "needsErrorInfo": false,
-  "onClick": "{{modalConfirmDeleteTestResult.name}}",
+  "onClick": "{{mdlTestResultDeleteConfirm.name}}",
   "parentColumnSpace": 12.625,
   "parentId": "7o6prv00r4",
   "parentRowSpace": 10,

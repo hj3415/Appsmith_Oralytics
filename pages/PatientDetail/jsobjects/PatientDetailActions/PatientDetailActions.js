@@ -1,7 +1,8 @@
 export default {
 	async onPageLoad() {
-    try {
-      const patientId = appsmith.URL.queryParams.patient_id;
+		try {
+			const patientId = appsmith.URL.queryParams.patient_id;
+			
 			/*
       if (!patientId) {
         showAlert("patient_id가 없습니다. 환자 목록으로 이동합니다.", "warning");
@@ -9,34 +10,40 @@ export default {
         return;
       }
 			*/
-      await storeValue("selectedPatientId", Number(patientId));
-      await storeValue("selectedVisitId", null);
-      await storeValue("selectedTestResultId", null);
-      await Api_ReadPatient.run();
-      await Api_ReadPatientVisits.run();
-      const visits = Api_ReadPatientVisits.data || [];
 
-      if (!visits.length) {
-        return;
-      }
+			await storeValue("selectedPatientId", Number(patientId));
+			await storeValue("selectedVisitId", null);
+			await storeValue("selectedTestResultId", null);
 
-      const firstVisit = visits[0];
-      await storeValue("selectedVisitId", firstVisit.id);
-      await Api_ReadVisit.run();
-      await Api_ReadVisitTestResult.run();
-      const testResult = Api_ReadVisitTestResult.data;
+			await Api_ReadPatient.run();
+			await Api_ReadPatientVisits.run();
 
-      if (testResult && testResult.id) {
-        await storeValue("selectedTestResultId", testResult.id);
-        await Api_ReadBacteriaDetails.run();
-      } else {
-        await storeValue("selectedTestResultId", null);
-      }
-    } catch (e) {
-      showAlert("환자 상세 정보를 불러오지 못했습니다.", "error");
-      console.log("onPageLoad error", e);
-    }
-  },
+			const visits = ApiResponseUtils.getItems(Api_ReadPatientVisits);
+
+			if (!visits.length) {
+				return;
+			}
+
+			const firstVisit = visits[0];
+			await storeValue("selectedVisitId", firstVisit.id);
+
+			await Api_ReadVisit.run();
+			await Api_ReadVisitTestResult.run();
+
+			const testResult = ApiResponseUtils.getData(Api_ReadVisitTestResult);
+
+			if (testResult && testResult.id) {
+				await storeValue("selectedTestResultId", testResult.id);
+				await Api_ReadBacteriaDetails.run();
+			} else {
+				await storeValue("selectedTestResultId", null);
+			}
+
+		} catch (e) {
+			showAlert("환자 상세 정보를 불러오지 못했습니다.", "error");
+			console.log("onPageLoad error", e);
+		}
+	},
 	
   async goBackToPatients() {
     navigateTo("Patients");
@@ -44,14 +51,14 @@ export default {
 
   async openPatientEditModal() {
 		await storeValue("editPatient", Api_ReadPatient.data.data);
-    showModal(modalPatientEdit.name);
+    showModal(mdlPatientEdit.name);
   },
 
   async submitPatientEdit() {
     try {
       await Api_UpdatePatient.run();
 
-      closeModal(modalPatientEdit.name);
+      closeModal(mdlPatientEdit.name);
 
       await Api_ReadPatient.run();
 
@@ -82,27 +89,26 @@ export default {
   },
 
   async selectVisitAndLoad(row) {
-  try {
-    await storeValue("selectedVisitId", row.id);
-    await storeValue("selectedTestResultId", null);
+		try {
+			await storeValue("selectedVisitId", row.id);
+			await storeValue("selectedTestResultId", null);
 
-    await Api_ReadVisit.run();
-    await Api_ReadVisitTestResult.run();
+			await Api_ReadVisit.run();
+			await Api_ReadVisitTestResult.run();
 
-    const res = Api_ReadVisitTestResult.data;
-		const testResult = res?.data;
+			const testResult = ApiResponseUtils.getData(Api_ReadVisitTestResult);
 
-		if (testResult && testResult.id) {
-			await storeValue("selectedTestResultId", testResult.id);
-			await Api_ReadBacteriaDetails.run();
+			if (testResult && testResult.id) {
+				await storeValue("selectedTestResultId", testResult.id);
+				await Api_ReadBacteriaDetails.run();
+			}
+
+			showAlert("내원 상세를 불러왔습니다.", "success");
+		} catch (e) {
+			showAlert("내원 상세 조회에 실패했습니다.", "error");
+			console.log("selectVisitAndLoad error", e);
 		}
-
-    showAlert("내원 상세를 불러왔습니다.", "success");
-  } catch (e) {
-    showAlert("내원 상세 조회에 실패했습니다.", "error");
-    console.log("selectVisitAndLoad error", e);
-  }
-},
+	},
 
   async openVisitEditModal() {
     showModal(modalVisitEdit.name);
@@ -130,7 +136,7 @@ export default {
 			await Api_UpdateVisitTestResult.run();
 			await Api_ReadVisitTestResult.run();
 
-			const testResult = Api_ReadVisitTestResult.data;
+			const testResult = ApiResponseUtils.getData(Api_ReadVisitTestResult);
 
 			if (testResult && testResult.id) {
 				await storeValue("selectedTestResultId", testResult.id);
@@ -214,7 +220,7 @@ export default {
 		try {
 			await Api_DeleteVisitTestResult.run();
 
-			closeModal(modalConfirmDeleteTestResult.name);
+			closeModal(mdlTestResultDeleteConfirm.name);
 
 			await storeValue("selectedTestResultId", null);
 
@@ -264,4 +270,27 @@ export default {
       console.log("openTestResultEntry error", e);
     }
   },
+	
+	async openPatientDeleteModal() {
+    showModal(mdlPatientDeleteConfirm.name);
+  },
+
+  async deletePatient() {
+    try {
+			const patient = ApiResponseUtils.getData(Api_ReadPatient);
+      if (!patient?.id) {
+        showAlert("삭제할 환자 정보를 찾을 수 없습니다.", "error");
+        return;
+      }
+
+      await Api_DeletePatient.run();
+      closeModal(mdlPatientDeleteConfirm.name);
+      showAlert("환자 정보가 삭제되었습니다.", "success");
+      navigateTo("Patients");
+    } catch (e) {
+      console.log("deletePatient error", e);
+      const message = ApiResponseUtils.getData(Api_DeletePatient);
+      showAlert(message, "error");
+    }
+  }
 }

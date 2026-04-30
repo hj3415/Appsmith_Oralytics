@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "69ec2efc3179fb4023ce2e90_8c10e51f-660d-45d6-8521-b3e4c617d453",
+  "id": "PatientDetail_ApiResponseUtils",
+  "unpublishedCollection": {
+    "name": "ApiResponseUtils",
+    "pageId": "PatientDetail",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

@@ -39,7 +39,7 @@
     ],
     "name": "Api_ReadVisitTestResult",
     "pageId": "PatientDetail",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

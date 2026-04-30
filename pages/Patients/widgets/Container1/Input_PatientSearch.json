@@ -15,7 +15,11 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
   "iconAlign": "left",
   "inputType": "TEXT",
   "isDisabled": false,
@@ -38,6 +42,7 @@
   "mobileRightColumn": 27,
   "mobileTopRow": 9,
   "needsErrorInfo": false,
+  "onTextChanged": "{{PatientsActions.searchPatients();}}",
   "parentColumnSpace": 6.07421875,
   "parentId": "lboerox60l",
   "parentRowSpace": 10,

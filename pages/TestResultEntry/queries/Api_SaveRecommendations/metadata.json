@@ -21,7 +21,7 @@
       "httpMethod": "PUT",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/test-results/{{appsmith.store.selectedTestResultId}}/bacteria-details",
+      "path": "/test-results/{{appsmith.store.selectedTestResultId}}/recommendations",
       "pluginSpecifiedTemplates": [
         {
           "value": true
